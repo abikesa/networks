@@ -1,1 +1,3 @@
-# networks
+- Brain & Learning
+- [Geoffrey Hinton](https://www.youtube.com)
+- [Terry Sejnowski](https://en.wikipedia.org/wiki/Terry_Sejnowski)
