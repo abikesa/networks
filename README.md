@@ -5,3 +5,4 @@
 - Ilya Sutskever & "Compute"
 - Back Propagation & Compressing information into Weights
 - Also known as Encoding
+- [David J. C. MacKay](http://www.inference.org.uk/mackay/)
