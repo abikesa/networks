@@ -20,13 +20,13 @@ MathJax.Hub.Config({
 > *[Letters to Abigail](https://www.masshist.org/digitaladams/archive/doc?id=L17800512jasecond)*
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg)
-### Activation Function/$Q$: 1st, 3rd, 5th, [♭♭7th](https://en.wikipedia.org/wiki/Chord_notation#Chord_quality), 9th  
+### Activation Function, $Q$: 1st, 3rd, 5th, [♭♭7th](https://en.wikipedia.org/wiki/Chord_notation#Chord_quality), 9th  
 1. Hunter-gatherer/`War`: spiritual teachings  (I)
 2. Peasant/`Economics`: [humanism](https://www.uuftc.org) (B)           
-### Biases/$U()$: 11th, 13th
+### Biases, $U()$: 11th, 13th
 3. Farmer/`Calculus`: judeo, christian (G)
 4. Manufacturer/`Philosophy`: world religions (Y)         
-### Weights/$\frac{dU()}{dQ}$: ♯9,♭9,♯11,♭13 
+### Weights, $\frac{dU()}{dQ}$: ♯9,♭9,♯11,♭13 
 5. Electricity/`Musick`: prophetic utterances ([O](https://www.youtube.com/watch?v=1aM1KYvl4Dw))
 6. Railway/`Leisure`: individual experience ([R](https://www.youtube.com/watch?v=fu-3WN9TJNI))     
 
