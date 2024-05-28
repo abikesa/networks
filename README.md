@@ -20,38 +20,16 @@ MathJax.Hub.Config({
 > *[Letters to Abigail](https://www.masshist.org/digitaladams/archive/doc?id=L17800512jasecond)*
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg)
-### [God](https://www.economist.com/culture/2024/05/14/god-an-ageing-product-outperforms-expectations)/Body/$Q$: 1st, 3rd, 5th, [♭♭7th](https://en.wikipedia.org/wiki/Chord_notation#Chord_quality), 9th  
+### Activation Function/$Q$: 1st, 3rd, 5th, [♭♭7th](https://en.wikipedia.org/wiki/Chord_notation#Chord_quality), 9th  
 1. Hunter-gatherer/`War`: spiritual teachings  (I)
 2. Peasant/`Economics`: [humanism](https://www.uuftc.org) (B)           
-### Community/Mind/$U()$: 11th, 13th
+### Biases/$U()$: 11th, 13th
 3. Farmer/`Calculus`: judeo, christian (G)
 4. Manufacturer/`Philosophy`: world religions (Y)         
-### Individual/Soul/$\frac{dU()}{dQ}$: ♯9,♭9,♯11,♭13 
+### Weights/$\frac{dU()}{dQ}$: ♯9,♭9,♯11,♭13 
 5. Electricity/`Musick`: prophetic utterances ([O](https://www.youtube.com/watch?v=1aM1KYvl4Dw))
 6. Railway/`Leisure`: individual experience ([R](https://www.youtube.com/watch?v=fu-3WN9TJNI))     
 
-#
-
-I could fill Volumes with Descriptions of Temples and Palaces, Paintings, Sculptures, Tapestry, Porcelaine, etc -- if I could have time. But I could not do this without neglecting my duty. The Science of Government it is my Duty to study, more than all other Sciences: the Art of Legislation and Administration and Negotiation, ought to take Place, indeed to exclude in a manner all other Arts. I must study Politicks and War that my sons may have liberty to study Painting and Poetry, Mathematicks and Philosophy. My sons ought to study Mathematicks and Philosophy, Geography, natural History, Naval Architecture, navigation, Commerce and Agriculture, in order to give their Children a right to study Painting, Poetry, Musick, Architecture, Statuary, Tapestry and Porcelaine.
-
-#
-
-To demonstrate diminishing marginal utility visually (**for the lot who have no study, but leisure**), I'll create a plot that shows the relationship between total utility and the quantity of a good consumed, alongside a marginal utility curve. Additionally, I'll include some calculus notation and Greek symbols to illustrate the concept mathematically. Leisure thus leads to cravings for utility - drugs come to mind, or a healthy return of the prodigal son to the arts, professional work, or even manual labor
-
-Here's a step-by-step plan:
-
-1. **Define Utility Functions:**
-   - **Total Utility (U):** A typical utility function $U(Q)$ where $Q$ is the quantity of the good.
-   - **Marginal Utility (MU):** The derivative of total utility with respect to quantity, $MU(Q) = \frac{dU(Q)}{dQ}$
-
-2. **Illustrate Diminishing Marginal Utility:**
-   - Show that as $Q$ increases, $MU$ decreases.
-
-3. **Mathematical Representation:**
-   - Use calculus notation to explain the relationship between total utility and marginal utility.
-   - Include Greek symbols like $\Delta$ (Delta) for change, and $\epsilon$ (epsilon) for a small increment.
-
-Let’s create the visual:
 
 ```python
 import numpy as np
