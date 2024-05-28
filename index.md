@@ -78,7 +78,7 @@ Running this code will generate a visual demonstration of diminishing marginal u
 
 Here is the generated image:
 
-![Diminishing Marginal Utility](diminishing_marginalutility.png)
+![Diminishing Marginal Utility](https://abikesa.github.io/johnadams/diminishing_marginalutility.png)
 
 > One needs challenges, a worthy adversary, the embrace of more remote overtones of the harmonic series - ***Q**ualities*
 
