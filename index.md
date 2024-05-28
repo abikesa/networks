@@ -16,15 +16,15 @@ MathJax.Hub.Config({
 
 ![](https://upload.wikimedia.org/wikipedia/commons/4/49/%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg)
 
-### Activation Function/$Q$: 1st, 3rd, 5th, [♭♭7th](https://en.wikipedia.org/wiki/Chord_notation#Chord_quality), 9th  
+### Activation Function, $Q$: 1st, 3rd, 5th, [♭♭7th](https://en.wikipedia.org/wiki/Chord_notation#Chord_quality), 9th  
 - Hunter-gatherer/`War`: spiritual teachings  (I)
 - Peasant/`Economics`: [humanism](https://www.uuftc.org) (B)
         
-### Biases/$U()$: 11th, 13th
+### Biases, $U()$: 11th, 13th
 - Farmer/`Calculus`: judeo, christian (G)
 - Manufacturer/`Philosophy`: world religions (Y)
        
-### Weights/$\frac{dU()}{dQ}$: ♯9,♭9,♯11,♭13 
+### Weights, $\frac{dU()}{dQ}$: ♯9,♭9,♯11,♭13 
 - Electricity/`Musick`: prophetic utterances ([O](https://www.youtube.com/watch?v=1aM1KYvl4Dw))
 - Railway/`Leisure`: individual experience ([R](https://www.youtube.com/watch?v=fu-3WN9TJNI))     
 
