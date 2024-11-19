@@ -415,15 +415,15 @@ document.write(`
 
 <span class="c1"># Define input nodes, including specific neural effects of White Russian components</span>
 <span class="n">input_nodes_patient</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;Oxytocin&#39;</span><span class="p">,</span> <span class="s1">&#39;Serotonin&#39;</span><span class="p">,</span> <span class="s1">&#39;Progesterone&#39;</span><span class="p">,</span> <span class="s1">&#39;Estrogen&#39;</span><span class="p">,</span> <span class="s1">&#39;Adenosine&#39;</span><span class="p">,</span> <span class="s1">&#39;Magnesium&#39;</span><span class="p">,</span> <span class="s1">&#39;Phonetics&#39;</span><span class="p">,</span> <span class="s1">&#39;Temperament&#39;</span><span class="p">,</span> 
-    <span class="s1">&#39;Degree&#39;</span><span class="p">,</span> <span class="s1">&#39;Scale&#39;</span><span class="p">,</span> <span class="s1">&#39;ATP&#39;</span><span class="p">,</span> <span class="s1">&#39;NAD+&#39;</span><span class="p">,</span> <span class="s1">&#39;Glutathion&#39;</span><span class="p">,</span> <span class="s1">&#39;Glutamate&#39;</span><span class="p">,</span> <span class="s1">&#39;GABA&#39;</span><span class="p">,</span> <span class="s1">&#39;Endorphin&#39;</span><span class="p">,</span> <span class="s1">&#39;Qualities&#39;</span><span class="p">,</span> 
-    <span class="s1">&#39;Extensions&#39;</span><span class="p">,</span> <span class="s1">&#39;Alterations&#39;</span><span class="p">,</span> <span class="s1">&#39;Dopamine&#39;</span><span class="p">,</span> <span class="s1">&#39;Caffeine&#39;</span><span class="p">,</span> <span class="s1">&#39;Testosterone&#39;</span><span class="p">,</span> <span class="s1">&#39;Noradrenaline&#39;</span><span class="p">,</span> <span class="s1">&#39;Adrenaline&#39;</span><span class="p">,</span> <span class="s1">&#39;Cortisol&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Oxytocin&#39;</span><span class="p">,</span> <span class="s1">&#39;Serotonin&#39;</span><span class="p">,</span> <span class="s1">&#39;Progesterone&#39;</span><span class="p">,</span> <span class="s1">&#39;Estrogen&#39;</span><span class="p">,</span> <span class="s1">&#39;Adenosine&#39;</span><span class="p">,</span> <span class="s1">&#39;Magnesium&#39;</span><span class="p">,</span> <span class="s1">&#39;Phonetics&#39;</span><span class="p">,</span> <span class="s1">&#39;Temperament&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Degree&#39;</span><span class="p">,</span> <span class="s1">&#39;Scale&#39;</span><span class="p">,</span> <span class="s1">&#39;ATP&#39;</span><span class="p">,</span> <span class="s1">&#39;NAD+&#39;</span><span class="p">,</span> <span class="s1">&#39;Glutathion&#39;</span><span class="p">,</span> <span class="s1">&#39;Glutamate&#39;</span><span class="p">,</span> <span class="s1">&#39;GABA&#39;</span><span class="p">,</span> <span class="s1">&#39;Endorphin&#39;</span><span class="p">,</span> <span class="s1">&#39;Qualities&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Extensions&#39;</span><span class="p">,</span> <span class="s1">&#39;Alterations&#39;</span><span class="p">,</span> <span class="s1">&#39;Dopamine&#39;</span><span class="p">,</span> <span class="s1">&#39;Caffeine&#39;</span><span class="p">,</span> <span class="s1">&#39;Testosterone&#39;</span><span class="p">,</span> <span class="s1">&#39;Noradrenaline&#39;</span><span class="p">,</span> <span class="s1">&#39;Adrenaline&#39;</span><span class="p">,</span> <span class="s1">&#39;Cortisol&#39;</span><span class="p">,</span>
     <span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Military&#39;</span><span class="p">,</span> <span class="s1">&#39;Cadence&#39;</span><span class="p">,</span> <span class="s1">&#39;Pockets&#39;</span>
 <span class="p">]</span>
 
 <span class="c1"># Define hidden layer nodes as archetypal latent space with distinct archetypes</span>
 <span class="n">hidden_layer_labels_patient</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">,</span> <span class="s1">&#39;Limbo (Tokenized)&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span>
+    <span class="s1">&#39;Elevation (Uplift)&#39;</span><span class="p">,</span> <span class="s1">&#39;Approbation (Validation)&#39;</span><span class="p">,</span> <span class="s1">&#39;Castration (Limitation)&#39;</span>
 <span class="p">]</span>
 
 <span class="c1"># Define output nodes for linear social validation hierarchy</span>
@@ -439,29 +439,27 @@ document.write(`
 <span class="n">G_patient</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">hidden_layer_labels_patient</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="s1">&#39;hidden&#39;</span><span class="p">)</span>
 <span class="n">G_patient</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">output_nodes_patient</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="s1">&#39;output&#39;</span><span class="p">)</span>
 
-<span class="c1"># Key narrative pathways to capture White Russian dynamics</span>
+<span class="c1"># Define key narrative pathways (thickened edges)</span>
 <span class="n">thick_edges_patient</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s1">&#39;GABA&#39;</span><span class="p">,</span> <span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Adenosine&#39;</span><span class="p">,</span> <span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Caffeine&#39;</span><span class="p">,</span> <span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Testosterone&#39;</span><span class="p">,</span> <span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Oxytocin&#39;</span><span class="p">,</span> <span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Serotonin&#39;</span><span class="p">,</span> <span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Endorphin&#39;</span><span class="p">,</span> <span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;ATP&#39;</span><span class="p">,</span> <span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">,</span> <span class="s1">&#39;Community&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Dopamine&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Cortisol&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Adrenaline&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Military&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Cadence&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Pockets&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">,</span> <span class="s1">&#39;Regional&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">,</span> <span class="s1">&#39;NexToken&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">,</span> <span class="s1">&#39;National&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">,</span> <span class="s1">&#39;Global&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">,</span> <span class="s1">&#39;Interstellar&#39;</span><span class="p">)</span>
+    <span class="c1"># Pathways emphasizing Elevation (Uplift)</span>
+    <span class="p">(</span><span class="s1">&#39;GABA&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation (Uplift)&#39;</span><span class="p">),</span>  <span class="c1"># Alcohol acting on GABA: relaxation, inhibition</span>
+    <span class="p">(</span><span class="s1">&#39;Adenosine&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation (Uplift)&#39;</span><span class="p">),</span>  <span class="c1"># Caffeine modulation of adenosine: alertness</span>
+    <span class="p">(</span><span class="s1">&#39;Oxytocin&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation (Uplift)&#39;</span><span class="p">),</span>  <span class="c1"># Social bonding, closeness</span>
+    <span class="p">(</span><span class="s1">&#39;Endorphin&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation (Uplift)&#39;</span><span class="p">),</span>  <span class="c1"># Shared humor and pleasure</span>
+    <span class="p">(</span><span class="s1">&#39;ATP&#39;</span><span class="p">,</span> <span class="s1">&#39;Elevation (Uplift)&#39;</span><span class="p">),</span>  <span class="c1"># Cream as an energy source</span>
+
+    <span class="c1"># Pathways emphasizing Approbation (Validation)</span>
+    <span class="p">(</span><span class="s1">&#39;Dopamine&#39;</span><span class="p">,</span> <span class="s1">&#39;Approbation (Validation)&#39;</span><span class="p">),</span>  <span class="c1"># Dopamine&#39;s role in reward-seeking and tokenization</span>
+    <span class="p">(</span><span class="s1">&#39;Caffeine&#39;</span><span class="p">,</span> <span class="s1">&#39;Approbation (Validation)&#39;</span><span class="p">),</span>  <span class="p">(</span><span class="s1">&#39;Approbation (Validation)&#39;</span><span class="p">,</span> <span class="s1">&#39;NexToken&#39;</span><span class="p">),</span>  <span class="c1"># Drive for focus and achievement</span>
+
+    <span class="c1"># Pathways emphasizing Castration (Limitation)</span>
+    <span class="p">(</span><span class="s1">&#39;Testosterone&#39;</span><span class="p">,</span> <span class="s1">&#39;Castration (Limitation)&#39;</span><span class="p">),</span>  <span class="c1"># Symbolic castration as masculinity diminished or questioned</span>
+    <span class="p">(</span><span class="s1">&#39;Cortisol&#39;</span><span class="p">,</span> <span class="s1">&#39;Castration (Limitation)&#39;</span><span class="p">),</span>  <span class="c1"># Stress response undercutting resilience</span>
+    <span class="p">(</span><span class="s1">&#39;Adrenaline&#39;</span><span class="p">,</span> <span class="s1">&#39;Castration (Limitation)&#39;</span><span class="p">),</span>  <span class="c1"># Fight-or-flight as undermining composure</span>
+    <span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Castration (Limitation)&#39;</span><span class="p">),</span>  <span class="c1"># Limited temporal resources</span>
+    <span class="p">(</span><span class="s1">&#39;Military&#39;</span><span class="p">,</span> <span class="s1">&#39;Castration (Limitation)&#39;</span><span class="p">),</span>  <span class="c1"># Rigid hierarchies suppressing individuality</span>
+    <span class="p">(</span><span class="s1">&#39;Cadence&#39;</span><span class="p">,</span> <span class="s1">&#39;Castration (Limitation)&#39;</span><span class="p">),</span>  <span class="c1"># Enforced rhythm restricting freedom</span>
+    <span class="p">(</span><span class="s1">&#39;Pockets&#39;</span><span class="p">,</span> <span class="s1">&#39;Castration (Limitation)&#39;</span><span class="p">)</span>  <span class="c1"># Symbolic lack of resources or containment</span>
 <span class="p">]</span>
 
 <span class="c1"># Connect all input nodes to hidden layer archetypes</span>
@@ -469,7 +467,7 @@ document.write(`
     <span class="k">for</span> <span class="n">hidden_node</span> <span class="ow">in</span> <span class="n">hidden_layer_labels_patient</span><span class="p">:</span>
         <span class="n">G_patient</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">input_node</span><span class="p">,</span> <span class="n">hidden_node</span><span class="p">)</span>
 
-<span class="c1"># Connect hidden layer archetypes to output nodes with regular connections</span>
+<span class="c1"># Connect hidden layer archetypes to output nodes</span>
 <span class="k">for</span> <span class="n">hidden_node</span> <span class="ow">in</span> <span class="n">hidden_layer_labels_patient</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">output_node</span> <span class="ow">in</span> <span class="n">output_nodes_patient</span><span class="p">:</span>
         <span class="n">G_patient</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">hidden_node</span><span class="p">,</span> <span class="n">output_node</span><span class="p">)</span>
@@ -498,10 +496,10 @@ document.write(`
 <span class="n">edge_widths_patient</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span> <span class="k">if</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">thick_edges_patient</span> <span class="k">else</span> <span class="mf">0.2</span> <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">G_patient</span><span class="o">.</span><span class="n">edges</span><span class="p">()]</span>
 
 <span class="c1"># Draw graph with rotated positions, thicker narrative edges, and archetypal colors</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
 <span class="n">pos_rotated</span> <span class="o">=</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="n">pos_patient</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
 
-<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G_patient</span><span class="p">,</span> <span class="n">pos_rotated</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">3500</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors_patient</span><span class="p">,</span> 
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G_patient</span><span class="p">,</span> <span class="n">pos_rotated</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">3500</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors_patient</span><span class="p">,</span>
         <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">arrows</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">edge_widths_patient</span><span class="p">)</span>
 
 <span class="c1"># Add title and remove axes for clean visualization</span>
@@ -513,9 +511,15 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/ebdf160099fd3e58d5af2fc53dacf4be8aa0f364519a991ebf3867be196952e3.png" src="../_images/ebdf160099fd3e58d5af2fc53dacf4be8aa0f364519a991ebf3867be196952e3.png" />
+<img alt="../_images/20b190a9d1875b987b314a4f06731f1f6d3c9e19d0357076ad12d2abce32e807.png" src="../_images/20b190a9d1875b987b314a4f06731f1f6d3c9e19d0357076ad12d2abce32e807.png" />
 </div>
 </div>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1px; height: 1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">This updated graph structure integrates the dynamics of dopamine and its alignment with the <strong>light green</strong> node representing tokenization while preserving the narrative framework. The key adjustments include: 1. <strong>Dopamine Highlighting:</strong> Dopamine is directly associated with the hidden node “Approbation (Validation),” emphasizing its role in tokenized reward-seeking behavior. 2. <strong>Color Coding:</strong> The <strong>light green</strong> archetype is extended to represent dopamine’s influence alongside tokenization, highlighting the narrative that tokenization acts as both a lure and a trap.3. <strong>Narrative Edges:</strong> Key pathways, such as the connection between dopamine and “Approbation (Validation),” are thickened to emphasize their importance within the network’s broader story. 4. <strong>Renamed Nodes:</strong> Adjustments in naming ensure alignment with their symbolic roles. For instance:- “Inferno (Weakness)” aligns with output nodes, reinforcing tokenized attempts at transcendence.- Inputs like “Cadence” and “Pockets” reflect symbolic limitations. 5. <strong>Graph Visualization:</strong> Enhanced layout and node positioning ensure clarity in distinguishing layers and narrative pathways. This framework situates your neural network as an evolving model for exploring the intersection of neurochemical dynamics, archetypal structures, and their real-world manifestations in behaviors like social media engagement or existential navigation. If you’d like further refinement or additional archetypes, let me know!</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="toctree-wrapper compound">
 </div>
 </section>
