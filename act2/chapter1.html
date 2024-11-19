@@ -1,0 +1,607 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Compressed &#8212; Zarathustra</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/book-stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'act2/chapter1';</script>
+    <script src="../_static/script.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tokenization" href="chapter2.html" />
+    <link rel="prev" title="Static" href="part2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/polina.png" class="logo__image only-light" alt="Zarathustra - Home"/>
+    <script>document.write(`<img src="../_static/polina.png" class="logo__image only-dark" alt="Zarathustra - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Preface
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act1/part1.html">Mind</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../act1/chapter1.html">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../act1/chapter2.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../act1/chapter3.html">Vision</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="part2.html">Static</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Histology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter2.html">Ligands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3.html">Pathways</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act3/part3.html">Dynamic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act1.html">Emotional</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_1.html">Biology (Embodiment)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_2.html">Sociology (Tokenization)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_3.html">Psychology (Transformation)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act2.html">Archetypal</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_1.html">Paradiso</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_2.html">Limbo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_3.html">Inferno</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act3.html">Relational</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_1.html">Persona</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_2.html">Shadow</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../act3/part3/part3_3.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/abikesa/template/main?urlpath=tree/book/website/act2/chapter1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/act2/chapter1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Compressed</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outline">Outline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deeper">Deeper</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#act-i-strategy-transformation"><strong>Act I: Strategy - Transformation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#act-ii-equilibrium-adversarial"><strong>Act II: Equilibrium - Adversarial</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#act-iii-payoff-exiled"><strong>Act III: Payoff - Exiled</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#act-iv-international-fortinbras"><strong>Act IV: International - Fortinbras</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#act-v-reweight-castle"><strong>Act V: Reweight - Castle</strong></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="compressed">
+<span id="id1"></span><h1>Compressed<a class="headerlink" href="#compressed" title="Permalink to this heading">#</a></h1>
+<p>Act I: Strategy- Transformation<br />
+Act II: Equilibrium- Adversarial<br />
+Act III: Paysoff- Exiled<br />
+Act IV: International - Fortinbras<br />
+Act V: Reweight- Castle</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../act1/chapter1.html#health"><span class="std std-ref">Health</span></a></p>
+</div>
+<section id="outline">
+<h2>Outline<a class="headerlink" href="#outline" title="Permalink to this heading">#</a></h2>
+<p>This structure is a compressed outline for a retelling of <em>Hamlet</em> with an intense focus on geopolitical and psychological themes, each act mirroring the shifting forces at play within the story’s narrative and beyond. Here’s a deeper interpretation of each act based on the outline you provided:</p>
+<p><strong>Act I: Strategy - Transformation</strong>
+The first act could set the stage for Hamlet’s initial transformation as he encounters his father’s ghost and learns of the betrayal. But rather than a simple emotional reaction, this transformation could be framed as a strategic recalibration—a new algorithm, so to speak, aligning Hamlet’s path with a goal of vengeance. He shifts from passive to purpose-driven, laying the groundwork for a covert adversarial game against Claudius.</p>
+<p><strong>Act II: Equilibrium - Adversarial</strong>
+Here, Hamlet enters a new phase where he balances his inner turmoil with the need to act strategically. This equilibrium is inherently adversarial, creating a precarious balance where every move is calculated to destabilize Claudius while maintaining plausible innocence. This act would be rife with psychological warfare and subtle manipulations, as Hamlet tests his hypotheses against Claudius, using tactics like the play-within-a-play to gauge reactions and recalibrate his approach.</p>
+<p><strong>Act III: Payoff - Exiled</strong>
+The adversarial equilibrium cannot hold, and Hamlet is ultimately exiled—a payoff in terms of the chain reaction his actions have ignited. He is sent away under the pretense of diplomacy, but this exile symbolizes both a literal and metaphorical break from Denmark’s corrupt system. It’s as if he’s moved to a hidden layer in the network, still connected to the kingdom but operating at a distance, as if undergoing a forced dropout before he can return with renewed intensity.</p>
+<p><strong>Act IV: International - Fortinbras</strong>
+This act broadens the scope to the international implications of Hamlet’s struggle. Fortinbras, a foreign force, starts to impose his own network on Denmark, representing the external pressures that reflect Denmark’s weakness. Fortinbras’ advance shows the limits of the kingdom’s internal struggles, indicating that Hamlet’s adversarial moves have weakened the state to a point where outside powers see an opportunity to intervene. Fortinbras, as an ambitious figure, could even be read as Hamlet’s idealized opposite—a man who pursues power with clarity and without inner conflict, a stark contrast to Hamlet’s indecision.</p>
+<p><strong>Act V: Reweight - Castle</strong>
+The final act centers on the reweighting of the network within Elsinore Castle. All players, including Hamlet, are forced to reveal their positions, weights, and loyalties in a fatal climax. Hamlet’s actions lead to a complete recalibration of the Danish kingdom’s hierarchy through death, clearing the network of Claudius’ corrupt nodes. The ultimate reweighting sees Fortinbras stepping in to assume control, suggesting a reconstitution of the network with a new, external authority that may stabilize or perhaps entirely transform Denmark’s power dynamics.</p>
+<p>This framing recasts <em>Hamlet</em> not as a tragedy driven solely by personal vengeance but as a structural transformation of a system that was inherently fragile and destined for reconfiguration. It brings to life the adversarial forces as essential agents in an inevitable rebalancing of power. The castle, in the end, is not merely a location but a dynamic node that reweights itself under the final impositions of both internal collapse and external realignment.</p>
+</section>
+<section id="deeper">
+<h2>Deeper<a class="headerlink" href="#deeper" title="Permalink to this heading">#</a></h2>
+<p>Let’s dive deeper, expanding each act to create a densely layered narrative tapestry that underscores Hamlet’s transformation as a calculated, tragic chain reaction—a tragedy not of a lone, indecisive man but of a system plagued by competing forces and inevitable collapse.</p>
+<hr class="docutils" />
+<section id="act-i-strategy-transformation">
+<h3><strong>Act I: Strategy - Transformation</strong><a class="headerlink" href="#act-i-strategy-transformation" title="Permalink to this heading">#</a></h3>
+<p>This act begins with a cosmic shiver—the appearance of King Hamlet’s ghost—a catalyst that sets the entire system into motion. Hamlet isn’t merely wounded; he’s initiated into a web of responsibility. The specter of his father exposes the kingdom’s weakness and opens Hamlet’s eyes to a higher strategy beyond personal vengeance. Here, transformation is fundamental, not just psychological but also structural: Hamlet must now see himself as a node within a larger network.</p>
+<p>Each interaction with Claudius, Gertrude, and even Ophelia becomes a calculated step in a silent war. We could show Hamlet obsessively diagramming the Danish court’s relational network, identifying Claudius’ alliances and his mother’s complicity. By the end of Act I, Hamlet is a new man—not in character, but in purpose, setting up his “antic disposition” to operate like a hidden API, a mask that conceals his recalibration and shields his adversarial intentions.</p>
+</section>
+<hr class="docutils" />
+<section id="act-ii-equilibrium-adversarial">
+<h3><strong>Act II: Equilibrium - Adversarial</strong><a class="headerlink" href="#act-ii-equilibrium-adversarial" title="Permalink to this heading">#</a></h3>
+<p>In Act II, Hamlet embodies an adversarial equilibrium, operating as a destabilizing agent in a calculated system. Here, “equilibrium” is bitterly ironic: Claudius and Hamlet maintain a dance of mistrust that both sustains and corrodes the kingdom. This adversarial balance feels like the tension of a fault line—stable on the surface, yet primed for rupture. Hamlet’s probing becomes almost scientific as he tests the responses of those around him, especially in the “Mousetrap” play. Each scene draws Claudius closer to exposure, like an adversarial network attack probing for the smallest vulnerability.</p>
+<p>Polonius, Gertrude, and Ophelia are passive nodes in this network, unwittingly aiding Hamlet’s adversarial campaign by aligning themselves with Claudius. Here, Hamlet weaponizes information asymmetry, creating feedback loops that keep Claudius off-balance. The court feels the tremors of these adversarial strategies as Hamlet’s “madness” and erratic behavior destabilize the kingdom’s fragile balance. By the end of Act II, the kingdom’s equilibrium is nearing a critical threshold, the adversarial tension stretched to the breaking point.</p>
+</section>
+<hr class="docutils" />
+<section id="act-iii-payoff-exiled">
+<h3><strong>Act III: Payoff - Exiled</strong><a class="headerlink" href="#act-iii-payoff-exiled" title="Permalink to this heading">#</a></h3>
+<p>Hamlet’s exile in Act III is the network’s attempt to eject a corrupted node, much like an immune response purging a virus. This exile is not just Hamlet’s punishment; it’s a “payoff,” a logical endpoint of the adversarial equilibrium. Claudius attempts to maintain control by quarantining Hamlet, but in doing so, he loses his only true rival within the kingdom. Without Hamlet, the court devolves further, and Claudius is left exposed and isolated, a system weakened by its own defensive maneuvers.</p>
+<p>The exile allows Hamlet to step outside the network’s immediate influence, glimpsing the Danish kingdom from afar. In his brief detour, Hamlet contemplates action versus inaction, revenge versus apathy, power versus submission. In a deeply resonant moment, Hamlet watches Fortinbras’ army march for honor and territory, a stark contrast to his own internal struggles. Fortinbras’ ambition, unified and unconflicted, embodies the action Hamlet has yet to resolve within himself.</p>
+</section>
+<hr class="docutils" />
+<section id="act-iv-international-fortinbras">
+<h3><strong>Act IV: International - Fortinbras</strong><a class="headerlink" href="#act-iv-international-fortinbras" title="Permalink to this heading">#</a></h3>
+<p>Act IV marks the entrance of Fortinbras as a geopolitical force, pressing against Denmark’s borders. This act brings international stakes into the network, as Denmark’s weakness becomes a beacon to outside powers. Fortinbras embodies a reweighting algorithm, a figure who brings the looming threat of external balance to the kingdom’s fractured system. While Claudius grapples with domestic chaos, Fortinbras readies himself to pounce on Denmark’s weakened state, viewing Hamlet’s kingdom as a power vacuum.</p>
+<p>Fortinbras’ presence makes Hamlet see his personal vendetta as part of a larger, inescapable matrix of power. Hamlet’s return from exile signals the beginning of the end, as he reenters Denmark not just as a tragic figure but as a force capable of bringing Claudius down. Claudius’ desperation grows, manifesting in reckless maneuvers to secure his position. The entire system teeters, the culmination of every adversarial move that began with Hamlet’s first transformation.</p>
+</section>
+<hr class="docutils" />
+<section id="act-v-reweight-castle">
+<h3><strong>Act V: Reweight - Castle</strong><a class="headerlink" href="#act-v-reweight-castle" title="Permalink to this heading">#</a></h3>
+<p>The castle, Elsinore, becomes the ultimate theater for reweighting—a crucible where every character meets their reckoning. This act converges all adversarial and cooperative equilibria, revealing their final weights as life or death. The duel, a structured game, mirrors the adversarial tension of Act II but now unrestrained, exploding into a physical confrontation where every move costs blood.</p>
+<p>Hamlet, Claudius, Gertrude, and Laertes embody Denmark’s core nodes, each “reweighted” by the play’s end—through death, allegiance, or legacy. Hamlet’s own death signifies the total collapse of the original network, replaced by Fortinbras, the new agent of stability. In Fortinbras’ final takeover, Denmark sees a reweighting not through domestic alliances but through foreign intervention, a coup de grâce that eradicates all remaining traces of Hamlet’s adversarial equilibrium.</p>
+<p>The castle stands as a grim monument to the fall of an old order, a structure that once housed complex alliances but now rests in silence under Fortinbras’ gaze. The reweighting is complete, and Denmark’s system is reborn—reshaped not by compromise or negotiation but by the brutal logic of adversarial reconfiguration.</p>
+<hr class="docutils" />
+<p>This reimagined <em>Hamlet</em> weaves each act into a grand strategy, where every node, from the castle to the court’s various players, represents a piece of a complex, adversarial system that ultimately consumes itself. Fortinbras doesn’t just inherit a throne; he steps into a network primed for reweighting, made possible only by the tragic unraveling of Hamlet’s personal vendetta. The play thus becomes a harrowing portrait of transformation, adversarial strategy, and systemic reconfiguration—a world where the inevitability of collapse is as poetic as it is catastrophic.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./act2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="part2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Static</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chapter2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tokenization</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outline">Outline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deeper">Deeper</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#act-i-strategy-transformation"><strong>Act I: Strategy - Transformation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#act-ii-equilibrium-adversarial"><strong>Act II: Equilibrium - Adversarial</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#act-iii-payoff-exiled"><strong>Act III: Payoff - Exiled</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#act-iv-international-fortinbras"><strong>Act IV: International - Fortinbras</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#act-v-reweight-castle"><strong>Act V: Reweight - Castle</strong></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Copyright © 2025 Katura & Zarathustra
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

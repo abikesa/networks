@@ -1,0 +1,886 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Health &#8212; Zarathustra</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/book-stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'act1/chapter1';</script>
+    <script src="../_static/script.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Weakness" href="chapter2.html" />
+    <link rel="prev" title="Mind" href="part1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/polina.png" class="logo__image only-light" alt="Zarathustra - Home"/>
+    <script>document.write(`<img src="../_static/polina.png" class="logo__image only-dark" alt="Zarathustra - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Preface
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="part1.html">Mind</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter2.html">Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3.html">Vision</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act2/part2.html">Static</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../act2/chapter1.html">Histology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../act2/chapter2.html">Ligands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../act2/chapter3.html">Pathways</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act3/part3.html">Dynamic</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act1.html">Emotional</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_1.html">Biology (Embodiment)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_2.html">Sociology (Tokenization)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_3.html">Psychology (Transformation)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act2.html">Archetypal</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_1.html">Paradiso</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_2.html">Limbo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_3.html">Inferno</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act3.html">Relational</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_1.html">Persona</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_2.html">Shadow</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../act3/part3/part3_3.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/abikesa/template/main?urlpath=tree/book/website/act1/chapter1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/act1/chapter1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Health</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unvalu-d-persons">Unvalu’d Persons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#network-of-duty">Network of Duty</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ophelia-a-peripheral-node"><strong>Ophelia: A Peripheral Node</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proxy-games">Proxy Games</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proxy-wars-ambiguity-in-trade-and-conflict"><strong>Proxy Wars: Ambiguity in Trade and Conflict</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-aesthetics-of-proxy-ambiguity"><strong>The Aesthetics of Proxy Ambiguity</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#toward-a-new-moral-framework"><strong>Toward a New Moral Framework</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#epilogue-hypnos-thanatos-and-eros"><strong>Epilogue: Hypnos, Thanatos, and Eros</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rhythm-blues">Rhythm &amp; Blues</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seven-year-itch-ambiguity-as-reflection">Seven-Year Itch: Ambiguity as Reflection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonic-ambiguity-a-musical-reflection"><strong>Harmonic Ambiguity: A Musical Reflection</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonic-networks-mixolydian-and-beyond"><strong>Harmonic Networks: Mixolydian and Beyond</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dance-between-modes-transformational-and-embodied"><strong>The Dance Between Modes: Transformational and Embodied</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#toward-a-new-harmonic-philosophy"><strong>Toward a New Harmonic Philosophy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rnb-as-a-network-of-feeling"><strong>RnB as a Network of Feeling</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trap-music">Trap Music</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-glow-after-war">The Glow After War</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemental-minimalism-phrygian-swagger"><strong>Elemental Minimalism: Phrygian Swagger</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemental-phrygian-the-root-of-the-matter"><strong>Elemental Phrygian: The Root of the Matter</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimalism-as-philosophy"><strong>Minimalism as Philosophy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dance-of-tension-and-release"><strong>The Dance of Tension and Release</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trap-as-elemental-music"><strong>Trap as Elemental Music</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soulja-boy">Soulja Boy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unified-framework">Unified Framework</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="health">
+<span id="id1"></span><h1>Health<a class="headerlink" href="#health" title="Permalink to this heading">#</a></h1>
+<section id="unvalu-d-persons">
+<h2>Unvalu’d Persons<a class="headerlink" href="#unvalu-d-persons" title="Permalink to this heading">#</a></h2>
+<iframe 
+    src="https://www.youtube.com/embed/qOSJsAMlpZQ" 
+    width="560" 
+    height="315" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen 
+    title="YouTube video player">
+</iframe>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../_images/blanche.png"><img alt="../_images/blanche.png" src="../_images/blanche.png" style="width: 1px; height: 1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text"><em>Debarge Who’s Holding it Down</em>. Enhanced live performance of Time Will Reveal by DeBarge. From the 1983 album In a Special Way, the crossover hit “Time Will Reveal” (Remastered HQ) was written by sister Bunny DeBarge &amp; brothers El and Bobby. Time Will Reveal reached number one on the Billboard R&amp;B singles chart and number 18 on the US pop singles chart. DeBarge members are Bunny DeBarge, El DeBarge, Mark DeBarge, Randy DeBarge, James DeBarge, and Bobby DeBarge (deceased, associate producer). Kenny “Babyface” Edmonds says this is his favorite song. Of course this led me to consider this as belonging among the pantheon of all modes of art!</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Think it no more.<br />
+For nature, crescent, does not grow alone<br />
+In thews and bulk; but as this temple waxes,<br />
+The inward service of the mind and soul<br />
+Grows wide withal. Perhaps he loves you now,<br />
+And now no soil nor cautel doth besmirch<br />
+The virtue of his will; but you must fear,<br />
+His greatness weigh’d, his will is not his own;<br />
+For he himself is subject to his birth:<br />
+He may not, as <code class="docutils literal notranslate"><span class="pre">unvalu’d</span></code> persons do,<br />
+Carve for himself; for on his choice depends<br />
+The sanctity and health of this whole state;<br />
+And therefore must his choice be circumscrib’d<br />
+Unto the voice and yielding of that body<br />
+Whereof he is the head. Then if he says he loves you,<br />
+It fits your wisdom so far to believe it<br />
+As he in his particular act and place<br />
+May give his saying deed; which is no further<br />
+Than the main voice of Denmark goes withal.<br />
+– Laertus</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Define input nodes, including specific neural effects of White Russian components</span>
+<span class="n">input_nodes_patient</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Oxytocin&#39;</span><span class="p">,</span> <span class="s1">&#39;Serotonin&#39;</span><span class="p">,</span> <span class="s1">&#39;Progesterone&#39;</span><span class="p">,</span> <span class="s1">&#39;Estrogen&#39;</span><span class="p">,</span> <span class="s1">&#39;Adenosine&#39;</span><span class="p">,</span> <span class="s1">&#39;Magnesium&#39;</span><span class="p">,</span> <span class="s1">&#39;Phonetics&#39;</span><span class="p">,</span> <span class="s1">&#39;Temperament&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Degree&#39;</span><span class="p">,</span> <span class="s1">&#39;Scale&#39;</span><span class="p">,</span> <span class="s1">&#39;ATP&#39;</span><span class="p">,</span> <span class="s1">&#39;NAD+&#39;</span><span class="p">,</span> <span class="s1">&#39;Glutathion&#39;</span><span class="p">,</span> <span class="s1">&#39;Glutamate&#39;</span><span class="p">,</span> <span class="s1">&#39;GABA&#39;</span><span class="p">,</span> <span class="s1">&#39;Endorphin&#39;</span><span class="p">,</span> <span class="s1">&#39;Qualities&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Extensions&#39;</span><span class="p">,</span> <span class="s1">&#39;Alterations&#39;</span><span class="p">,</span> <span class="s1">&#39;Dopamine&#39;</span><span class="p">,</span>  <span class="s1">&#39;Caffeine&#39;</span><span class="p">,</span> <span class="s1">&#39;Testosterone&#39;</span><span class="p">,</span> <span class="s1">&#39;Noradrenaline&#39;</span><span class="p">,</span> <span class="s1">&#39;Adrenaline&#39;</span><span class="p">,</span> <span class="s1">&#39;Cortisol&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Military&#39;</span><span class="p">,</span> <span class="s1">&#39;Cadence&#39;</span><span class="p">,</span> <span class="s1">&#39;Pockets&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># Define hidden layer nodes as archetypal latent space with distinct archetypes</span>
+<span class="n">hidden_layer_labels_patient</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">,</span> <span class="s1">&#39;Limbo (Tokenized)&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># Define output nodes for linear social validation hierarchy</span>
+<span class="n">output_nodes_patient</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Health&#39;</span><span class="p">,</span> <span class="s1">&#39;Family&#39;</span><span class="p">,</span> <span class="s1">&#39;Community&#39;</span><span class="p">,</span> <span class="s1">&#39;Local&#39;</span><span class="p">,</span> <span class="s1">&#39;Regional&#39;</span><span class="p">,</span> <span class="s1">&#39;NexToken&#39;</span><span class="p">,</span> <span class="s1">&#39;National&#39;</span><span class="p">,</span> <span class="s1">&#39;Global&#39;</span><span class="p">,</span> <span class="s1">&#39;Interstellar&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># Initialize graph</span>
+<span class="n">G_patient</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+
+<span class="c1"># Add all nodes to the graph</span>
+<span class="n">G_patient</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">input_nodes_patient</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="s1">&#39;input&#39;</span><span class="p">)</span>
+<span class="n">G_patient</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">hidden_layer_labels_patient</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="s1">&#39;hidden&#39;</span><span class="p">)</span>
+<span class="n">G_patient</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">output_nodes_patient</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="s1">&#39;output&#39;</span><span class="p">)</span>
+
+<span class="c1"># Key narrative pathways to capture White Russian dynamics</span>
+<span class="n">thick_edges_patient</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># Dude&#39;s path via White Russian effects</span>
+    <span class="p">(</span><span class="s1">&#39;GABA&#39;</span><span class="p">,</span> <span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span>  <span class="c1"># Alcohol acts on GABA</span>
+    <span class="p">(</span><span class="s1">&#39;Adenosine&#39;</span><span class="p">,</span> <span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span>  <span class="c1"># Caffeine acts on Adenosine</span>
+    <span class="p">(</span><span class="s1">&#39;Caffeine&#39;</span><span class="p">,</span><span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Testosterone&#39;</span><span class="p">,</span><span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span> <span class="c1"># What is a man?</span>
+    <span class="p">(</span><span class="s1">&#39;Oxytocin&#39;</span><span class="p">,</span><span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span> <span class="c1"># Social bonding</span>
+    <span class="p">(</span><span class="s1">&#39;Serotonin&#39;</span><span class="p">,</span><span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span> <span class="c1"># Stress resilience</span>
+    <span class="p">(</span><span class="s1">&#39;Endorphin&#39;</span><span class="p">,</span><span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span> <span class="c1"># Shared humor and pleasure in interactions</span>
+    <span class="p">(</span><span class="s1">&#39;ATP&#39;</span><span class="p">,</span> <span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">),</span>  <span class="c1"># Cream provides ATP</span>
+    <span class="c1"># (&#39;Paradiso (Embodied)&#39;, &#39;Health&#39;),</span>
+    <span class="c1"># (&#39;Paradiso (Embodied)&#39;, &#39;Family&#39;),</span>
+    <span class="p">(</span><span class="s1">&#39;Paradiso (Embodied)&#39;</span><span class="p">,</span> <span class="s1">&#39;Community&#39;</span><span class="p">),</span>
+
+    <span class="c1"># Big Lebowski&#39;s tokenized path</span>
+    <span class="p">(</span><span class="s1">&#39;Dopamine&#39;</span><span class="p">,</span><span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">),</span>  
+    <span class="p">(</span><span class="s1">&#39;Cortisol&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Adrenaline&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Military&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Cadence&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Pockets&#39;</span><span class="p">,</span> <span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">,</span> <span class="s1">&#39;Regional&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">,</span> <span class="s1">&#39;NexToken&#39;</span><span class="p">),</span> 
+    <span class="p">(</span><span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">,</span> <span class="s1">&#39;National&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">,</span> <span class="s1">&#39;Global&#39;</span><span class="p">),</span> 
+    <span class="p">(</span><span class="s1">&#39;Inferno (Weakness)&#39;</span><span class="p">,</span> <span class="s1">&#39;Interstellar&#39;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="c1"># Connect all input nodes to hidden layer archetypes</span>
+<span class="k">for</span> <span class="n">input_node</span> <span class="ow">in</span> <span class="n">input_nodes_patient</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">hidden_node</span> <span class="ow">in</span> <span class="n">hidden_layer_labels_patient</span><span class="p">:</span>
+        <span class="n">G_patient</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">input_node</span><span class="p">,</span> <span class="n">hidden_node</span><span class="p">)</span>
+
+<span class="c1"># Connect hidden layer archetypes to output nodes with regular connections</span>
+<span class="k">for</span> <span class="n">hidden_node</span> <span class="ow">in</span> <span class="n">hidden_layer_labels_patient</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">output_node</span> <span class="ow">in</span> <span class="n">output_nodes_patient</span><span class="p">:</span>
+        <span class="n">G_patient</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">hidden_node</span><span class="p">,</span> <span class="n">output_node</span><span class="p">)</span>
+
+<span class="c1"># Define layout positions</span>
+<span class="n">pos_patient</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">input_nodes_patient</span><span class="p">):</span>
+    <span class="n">pos_patient</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">i</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Input nodes at the bottom</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">output_nodes_patient</span><span class="p">):</span>
+    <span class="n">pos_patient</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">i</span> <span class="o">+</span> <span class="mf">1.5</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Output nodes at the top</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">hidden_layer_labels_patient</span><span class="p">):</span>
+    <span class="n">pos_patient</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Hidden nodes in the middle layer</span>
+
+<span class="c1"># Define color scheme for nodes based on archetypes and White Russian dynamics</span>
+<span class="n">node_colors_patient</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;paleturquoise&#39;</span> <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">input_nodes_patient</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span> <span class="o">+</span> <span class="n">hidden_layer_labels_patient</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">output_nodes_patient</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="k">else</span>
+    <span class="s1">&#39;lightgreen&#39;</span> <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">input_nodes_patient</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">20</span><span class="p">]</span> <span class="o">+</span> <span class="n">hidden_layer_labels_patient</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">output_nodes_patient</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span> <span class="k">else</span>
+    <span class="s1">&#39;lightsalmon&#39;</span> <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">input_nodes_patient</span><span class="p">[</span><span class="mi">20</span><span class="p">:]</span> <span class="o">+</span> <span class="n">hidden_layer_labels_patient</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span> <span class="o">+</span> <span class="n">output_nodes_patient</span><span class="p">[</span><span class="mi">6</span><span class="p">:]</span> <span class="k">else</span>
+    <span class="s1">&#39;lightgray&#39;</span>
+    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">G_patient</span><span class="o">.</span><span class="n">nodes</span><span class="p">()</span>
+<span class="p">]</span>
+
+<span class="c1"># Set edge widths with thickened lines for key narrative pathways</span>
+<span class="n">edge_widths_patient</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span> <span class="k">if</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">thick_edges_patient</span> <span class="k">else</span> <span class="mf">0.2</span> <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">G_patient</span><span class="o">.</span><span class="n">edges</span><span class="p">()]</span>
+
+<span class="c1"># Draw graph with rotated positions, thicker narrative edges, and archetypal colors</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">60</span><span class="p">))</span>
+<span class="n">pos_rotated</span> <span class="o">=</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="n">pos_patient</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G_patient</span><span class="p">,</span> <span class="n">pos_rotated</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">3500</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors_patient</span><span class="p">,</span> 
+        <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">arrows</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">edge_widths_patient</span><span class="p">)</span>
+
+<span class="c1"># Add title and remove axes for clean visualization</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;For on His Choice Depends The Sanctity and Health of this Whole State&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/58b6161c2dadabea7391f34d65afe8190cfb480d231ea2fc72010bb091f5c895.png" src="../_images/58b6161c2dadabea7391f34d65afe8190cfb480d231ea2fc72010bb091f5c895.png" />
+</div>
+</div>
+</section>
+<section id="network-of-duty">
+<h2>Network of Duty<a class="headerlink" href="#network-of-duty" title="Permalink to this heading">#</a></h2>
+<p>In <em>Hamlet</em>, relationships are never purely emotional; they exist within a rigid hierarchy of obligations. Each interaction, each connection, is shaped by the weight of duty to the crown, the kingdom, and Denmark’s survival. This framework transforms personal autonomy into a web of calculated choices, where affection must serve the imperatives of statecraft.</p>
+<section id="ophelia-a-peripheral-node">
+<h3><strong>Ophelia: A Peripheral Node</strong><a class="headerlink" href="#ophelia-a-peripheral-node" title="Permalink to this heading">#</a></h3>
+<p>Ophelia’s place within Hamlet’s network of duty is fragile and transient. As a potential spouse, her role is conditional—a token subordinated to the monarchy’s broader goals. Hamlet’s “favour” for her, described as a “fashion and a toy in blood,” is fleeting, visceral, and ultimately inconsequential against Denmark’s demands. Laertes’ warning to Ophelia is prophetic; her connection to Hamlet is ephemeral, a peripheral node overshadowed by the kingdom’s hierarchical priorities.</p>
+<p>For Hamlet, the hidden layer of his network compresses youthful passions into archetypes of duty, sovereignty, and sacrifice. Personal connections dissolve into abstracted roles, leaving Ophelia as an impermanent symbol of what could have been, rather than a meaningful relationship. The tragedy lies not only in Hamlet’s inability to reconcile his emotions with his duty but also in the system itself, which prioritizes survival and sovereignty over authentic human connection.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="proxy-games">
+<h2>Proxy Games<a class="headerlink" href="#proxy-games" title="Permalink to this heading">#</a></h2>
+<p><em>For on his choice depends the sanctity and health of this whole state</em><br />
+—Laertes</p>
+<p>Moving from Hamlet’s hierarchical structure to the transactional dynamics of modern geopolitics, we encounter similar themes of duty, sacrifice, and relational ambiguity. The trade within proxy wars—like those involving Ukraine and the U.S.—reflects a similar compression of values into strategic imperatives. Here, the kingdom’s survival becomes the nation’s geopolitical interest, and personal connections are replaced by alliances forged in the theater of war.</p>
+<section id="proxy-wars-ambiguity-in-trade-and-conflict">
+<h3><strong>Proxy Wars: Ambiguity in Trade and Conflict</strong><a class="headerlink" href="#proxy-wars-ambiguity-in-trade-and-conflict" title="Permalink to this heading">#</a></h3>
+<p>In the theater of geopolitics, proxy wars mirror the tensions of both RnB and Hip Hop. Like RnB, they are marked by ambiguity, where alliances blend altruism with strategy. Ukraine’s transactional relationship with the U.S. exemplifies this: weapons flow in, and support grows, but behind the altruism lies a calculated alignment of interests. This duality creates a dynamic reminiscent of Mixolydian ambiguity—a push and pull between genuine connection and strategic necessity.</p>
+<p>Yet, proxy wars also have moments of Hip Hop-like swagger, where nations celebrate victories and assert dominance. These flashes of confidence underscore the transactional rhythm of modern conflict: a dance of survival, influence, and spoils.</p>
+</section>
+<hr class="docutils" />
+<section id="the-aesthetics-of-proxy-ambiguity">
+<h3><strong>The Aesthetics of Proxy Ambiguity</strong><a class="headerlink" href="#the-aesthetics-of-proxy-ambiguity" title="Permalink to this heading">#</a></h3>
+<p>Proxy wars, like Hamlet’s web of duty, are theatrical. They rely on the choreography of alliances, the interplay of loyalty and leverage, and the balancing of sincere connection against strategic necessity. The transactional nature of these relationships does not negate their sincerity; instead, it underscores their complexity. Just as Hamlet’s favour for Ophelia is genuine yet constrained, America’s support for Ukraine is driven by both altruism and self-interest.</p>
+<p>This duality—the fusion of cooperation, transaction, and adversarial conflict—creates an aesthetic quality akin to tragedy. In Gaza and Syria, for example, adversarial relationships between states operate within an implicit framework of rules, red lines, and escalation thresholds. Even outright war becomes a transactional rhythm, a calculated equilibrium that preserves larger strategic interests.</p>
+</section>
+<hr class="docutils" />
+<section id="toward-a-new-moral-framework">
+<h3><strong>Toward a New Moral Framework</strong><a class="headerlink" href="#toward-a-new-moral-framework" title="Permalink to this heading">#</a></h3>
+<p>To fully grasp these dynamics, we must move beyond the binary of good and evil. Proxy wars, like Hamlet’s relational network, exist in a liminal space where survival demands compromise and morality becomes a construct of power. The transactional alliances in these conflicts are neither purely noble nor wholly corrupt—they are tools for navigating chaos. The sincerity of trade within war, whether in weapons or strategies, lies not in its purity but in its recognition of mutual value.</p>
+</section>
+<hr class="docutils" />
+<section id="epilogue-hypnos-thanatos-and-eros">
+<h3><strong>Epilogue: Hypnos, Thanatos, and Eros</strong><a class="headerlink" href="#epilogue-hypnos-thanatos-and-eros" title="Permalink to this heading">#</a></h3>
+<p>The networks of duty, sacrifice, and survival—whether in <em>Hamlet</em> or in the theater of proxy wars—highlight a convergence of human motivations. These dynamics embody the interplay of Nietzschean agency, Jungian archetypes, and Freudian impulses. If <em>Hamlet</em> operates under the shadow of <em>Thanatos</em> (death) and <em>Eros</em> (connection), then proxy wars evoke the specter of <em>Hypnos</em> (sleep)—a state of suspended resolution where ambiguity reigns.</p>
+<p>By embracing this ambiguity, we uncover a deeper truth: whether in Denmark or Ukraine, the dance of duty and strategy is neither good nor evil—it is simply human.</p>
+</section>
+</section>
+<section id="rhythm-blues">
+<h2>Rhythm &amp; Blues<a class="headerlink" href="#rhythm-blues" title="Permalink to this heading">#</a></h2>
+<section id="seven-year-itch-ambiguity-as-reflection">
+<h3>Seven-Year Itch: Ambiguity as Reflection<a class="headerlink" href="#seven-year-itch-ambiguity-as-reflection" title="Permalink to this heading">#</a></h3>
+<p>Rhythm &amp; Blues often mirrors the complexities of personal relationships, especially during periods of doubt and transformation. Many RnB songs explore themes tied to the proverbial “seven-year itch,” where initial optimism gives way to ambiguity, testing bonds and revealing fractures. This tension, often mirrored in harmonic structures, captures the push and pull of relationships grappling with time’s erosive forces.</p>
+</section>
+<section id="harmonic-ambiguity-a-musical-reflection">
+<h3><strong>Harmonic Ambiguity: A Musical Reflection</strong><a class="headerlink" href="#harmonic-ambiguity-a-musical-reflection" title="Permalink to this heading">#</a></h3>
+<p>Consider a track like Faith Evans and Stevie J’s <em>A Minute</em>. The harmonic framework oscillates between Mixolydian and Phrygian influences, blending the static with the dynamic. The ambiguity in its progression—the unresolved tension of ♭9♯9♭13 chords—reflects the emotional complexities of a relationship navigating doubt and renewal. In early years, RnB exudes optimism, with major tonalities and clean resolutions. But as time wears on, its tonalities grow darker, embodying the uncertainty of relationships after seven years.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="chapter2.html#minute"><span class="std std-ref">Falling in Love</span></a></p>
+</div>
+<p>This is where the genre thrives: its ability to hold space for contradictions. The Mixolydian mode suggests transformation and hope, while Phrygian passages ground the music in the weight of reality. RnB, like the struggles it reflects, dances between hope and hesitation, resolution and dissonance.</p>
+<p><strong>The Tension of Transformation</strong></p>
+<p>Like the interplay of duty and sacrifice in <em>Hamlet</em>, or the strategic ambiguities of proxy wars, RnB thrives on a duality: the collision of static frameworks with dynamic activations. This tension defines its sound, its soul, and its philosophical underpinnings.</p>
+</section>
+<section id="harmonic-networks-mixolydian-and-beyond">
+<h3><strong>Harmonic Networks: Mixolydian and Beyond</strong><a class="headerlink" href="#harmonic-networks-mixolydian-and-beyond" title="Permalink to this heading">#</a></h3>
+<p>Let’s revisit “A Minute.” Its harmonic framework, built on the Mixolydian ♭9♯9♭13, transforms a traditional dominant chord into something cosmic—a gravitational center around which other notes orbit. The first three bars establish this dominant-centric universe (11-♭13-root), only to shift into the Spanish Phrygian (♭9-♮3-11) in the final bars. This transition is not a mere stylistic flourish but an embodied journey, moving from the rooted to the exotic, evoking influences as diverse as flamenco and the maqams of Middle Eastern music.</p>
+<p>The contrapuntal tension—♯9-♭9-root-7—adds depth, layering harmonic possibilities that transcend conventional progressions. Here, each note is not just a degree but an activation within a larger network. This reimagining of harmonic relationships, where the dominant becomes a static center rather than a functional step toward resolution, echoes the paradigms of thinkers like Copernicus, Marx, and the Wachowskis, who challenged the linear and hierarchical to reveal systemic interconnectivity.</p>
+</section>
+<section id="the-dance-between-modes-transformational-and-embodied">
+<h3><strong>The Dance Between Modes: Transformational and Embodied</strong><a class="headerlink" href="#the-dance-between-modes-transformational-and-embodied" title="Permalink to this heading">#</a></h3>
+<p>What makes RnB unique is its ability to inhabit a liminal space between the Mixolydian (transformational) and Phrygian (embodied) modes. In this interplay lies the genre’s hallmark: the push-and-pull between movement and stasis, tension and release. The ♭13—so central to the Mixolydian framework—exposes the ambiguities of Western tonality, where Ionian (major) and Aeolian (minor) modes dominate but fail to capture the nuanced “dance” that RnB demands.</p>
+<p>This dance mirrors the structural ambiguity found in other domains of human experience. In <em>Hamlet</em>, the clash between personal desire and archetypal duty is a dramatic articulation of this tension. In proxy wars, the balance between altruism and strategic interest becomes a geopolitical expression of the same. In RnB, it is the interplay of modes that creates this friction—a harmonic embodiment of the genre’s soulful, transformative essence.</p>
+</section>
+<section id="toward-a-new-harmonic-philosophy">
+<h3><strong>Toward a New Harmonic Philosophy</strong><a class="headerlink" href="#toward-a-new-harmonic-philosophy" title="Permalink to this heading">#</a></h3>
+<p>Viewing harmony as a static framework, where notes activate relational dynamics rather than move linearly, redefines how we conceptualize music. In this model, the dominant (Mixolydian) is not just a chord but a philosophical center. The Phrygian acts as a foil, an embodiment of grounded emotion, while the Mixolydian represents transformation and ascent.</p>
+<p>This paradigm shift in harmony aligns with the broader themes explored in <em>Hamlet</em> and proxy wars: the inevitability of ambiguity, the coexistence of opposites, and the search for meaning within structured chaos. RnB, with its fluid progressions and modal tensions, becomes a musical articulation of these themes—a genre that bridges embodiment and transcendence.</p>
+</section>
+<hr class="docutils" />
+<section id="rnb-as-a-network-of-feeling">
+<h3><strong>RnB as a Network of Feeling</strong><a class="headerlink" href="#rnb-as-a-network-of-feeling" title="Permalink to this heading">#</a></h3>
+<p>In the same way that Hamlet’s duty-bound network of relationships constrains and reshapes his emotional outputs, RnB’s harmonic structures encode an intricate network of tensions. Each chord progression, each modal shift, reflects a compression of vast emotional possibilities into archetypal patterns. The result is a genre that resonates universally, evoking both the personal and the cosmic.</p>
+<p>Whether through the haunting ambiguity of a Mixolydian ♭9♯9♭13 or the earthy embodiment of the Spanish Phrygian, RnB captures the dance of human experience. It speaks to our longing for transformation, our need for connection, and the beauty that arises when opposites collide.</p>
+</section>
+</section>
+<section id="trap-music">
+<h2>Trap Music<a class="headerlink" href="#trap-music" title="Permalink to this heading">#</a></h2>
+<section id="the-glow-after-war">
+<h3>The Glow After War<a class="headerlink" href="#the-glow-after-war" title="Permalink to this heading">#</a></h3>
+<p>In contrast, Hip Hop operates from a position of victorious swagger, often reflecting the spoils of war—literal or figurative. Where RnB lingers in ambiguity, Hip Hop strides confidently into clarity. Its themes and structures celebrate survival and triumph, with <code class="docutils literal notranslate"><span class="pre">minimal</span></code> introspection about the cost.</p>
+</section>
+<section id="elemental-minimalism-phrygian-swagger">
+<h3><strong>Elemental Minimalism: Phrygian Swagger</strong><a class="headerlink" href="#elemental-minimalism-phrygian-swagger" title="Permalink to this heading">#</a></h3>
+<p>Soulja Boy’s <em>Pretty Boy Swag</em> epitomizes this ethos. Its reliance on the elemental Phrygian mode—root and ♭9, punctuated by rhythmic dynamism—creates a hypnotic soundscape that prioritizes percussive <code class="docutils literal notranslate"><span class="pre">military</span> <span class="pre">cadence</span></code> over harmonic complexity. The stark minimalism mirrors the aftermath of conflict: stripped down, raw, and unapologetic. Here, the music isn’t about what’s lost; it’s about what’s claimed.</p>
+<p>Where RnB uses harmonic layers to evoke tension, Hip Hop revels in rhythmic minimalism. Tracks like <em>Pretty Boy Swag</em> use repetition to amplify swagger, creating anthems of self-assurance. The sparse harmonic framework—root, ♭9, and the occasional 3rd—provides just enough tension to keep the listener engaged without obscuring the rhythm’s power. It’s music for a post-conflict world, where victory demands celebration, not reflection.</p>
+<p><strong>Elemental Phrygian and the Art of Minimalism</strong></p>
+<iframe 
+    src="https://www.youtube.com/embed/KTJVlJ25S8c" 
+    width="560" 
+    height="315" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen 
+    title="YouTube video player">
+</iframe>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="act1/figures/blanche.*"><img alt="act1/figures/blanche.*" src="act1/figures/blanche.*" style="width: 1px; height: 1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text"><em>Phrygian Mode</em>. Trap music, exemplified by Soulja Boy Tell’em’s “Pretty Boy Swag,” thrives on an elemental Phrygian framework, reducing harmony to the root and ♭9, with occasional glimpses of 3-♭9-root. This minimalist structure mirrors the stark tension of Flamenco, where the Phrygian mode’s dissonance is a canvas for rhythmic and melodic expression. Just as Flamenco’s austerity draws attention to intricate interplay, Trap’s rhythmic focus amplifies vocal swagger and percussive complexity, creating a hypnotic and visceral soundscape. The result is a timeless dialogue between ancient modal traditions and modern beats, connecting cultures through shared musical DNA.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>With its reliance on the Phrygian mode—root and ♭9, occasionally venturing to 3-♭9-root—it embodies a kind of elemental purity that would resonate with any Flamenco musician accustomed to the tension and austerity of this mode. Trap, in its minimalism, achieves a stark power that transcends genre boundaries, connecting ancient traditions with modern expressions.</p>
+</section>
+<section id="elemental-phrygian-the-root-of-the-matter">
+<h3><strong>Elemental Phrygian: The Root of the Matter</strong><a class="headerlink" href="#elemental-phrygian-the-root-of-the-matter" title="Permalink to this heading">#</a></h3>
+<p>At its core, Trap music uses the Phrygian mode as an elemental force, reducing harmony to its most basic tensions. In “Pretty Boy Swag,” the root and ♭9 dominate, creating an almost hypnotic cycle of unresolved dissonance. The occasional addition of the 3rd—an ephemeral touch of major tonality—deepens the texture, but only fleetingly. The music refuses to resolve, keeping the listener suspended in a state of rhythmic anticipation.</p>
+<p>This austerity mirrors the approach of Flamenco, where the Phrygian mode serves as the backbone of traditional forms like <em>soleá</em> and <em>bulerías</em>. Flamenco musicians, with their mastery of intricate melodies and microtonal inflections, would recognize the stark beauty of Soulja Boy’s stripped-down structure. The ♭9, so central to Flamenco’s tension, becomes a defining feature in Trap—a thread of shared musical DNA that connects Southern rap to the Iberian Peninsula.</p>
+</section>
+<section id="minimalism-as-philosophy">
+<h3><strong>Minimalism as Philosophy</strong><a class="headerlink" href="#minimalism-as-philosophy" title="Permalink to this heading">#</a></h3>
+<p>The lack of harmonic progression in Trap is not a limitation but a deliberate aesthetic choice. By focusing on the root and ♭9, Trap creates a musical void that draws attention to rhythm, texture, and vocal delivery. This minimalism is both modern and timeless—a nod to the elemental power of music that doesn’t rely on complexity to convey depth.</p>
+<p>In “Pretty Boy Swag,” the beat’s repetitive simplicity amplifies the vocal swagger, turning the track into an anthem of self-assurance. The absence of harmonic distraction allows every word, every ad-lib, to cut through with razor-sharp clarity. This focus on the essentials echoes the Flamenco guitarist’s restraint, where a single note or bend can carry the weight of an entire performance.</p>
+</section>
+<section id="the-dance-of-tension-and-release">
+<h3><strong>The Dance of Tension and Release</strong><a class="headerlink" href="#the-dance-of-tension-and-release" title="Permalink to this heading">#</a></h3>
+<p>While Trap may lack traditional harmonic movement, it compensates with dynamic interplay between rhythmic tension and percussive release. The sub-bass and hi-hats in “Pretty Boy Swag” create a lattice of sound that shifts and evolves, drawing the listener into a trance-like state. This rhythmic complexity mirrors Flamenco’s percussive footwork and hand claps (<em>palmas</em>), where the groove becomes the primary vehicle for emotional expression.</p>
+<p>The occasional 3-♭9-root in Trap acts as a fleeting moment of brightness, much like the <em>rasgueado</em> in Flamenco—a rapid strumming technique that breaks the tension before returning to the mode’s dark core. These brief excursions remind the listener of the Phrygian mode’s versatility, capable of conveying both stark austerity and fleeting beauty.</p>
+</section>
+<section id="trap-as-elemental-music">
+<h3><strong>Trap as Elemental Music</strong><a class="headerlink" href="#trap-as-elemental-music" title="Permalink to this heading">#</a></h3>
+<p>Trap’s reliance on the Phrygian mode positions it as a kind of elemental music—a return to the raw materials of sound. Just as Flamenco draws on centuries of tradition to channel the primal emotions of its performers, Trap uses the Phrygian mode to strip music down to its barest, most essential components. The result is a sound that resonates on a visceral level, connecting modern beats with ancient modes in a dialogue that transcends time and place.</p>
+<p>Soulja Boy’s “Pretty Boy Swag” is not merely a product of the Trap genre but an archetype of its minimalist ethos. It demonstrates how the absence of harmony can create a space for rhythm and mode to shine, crafting a musical landscape that is as hypnotic as it is elemental. Flamenco musicians would find in its Phrygian simplicity a kindred spirit—a shared language of tension, restraint, and raw power.</p>
+<hr class="docutils" />
+<p>Our analysis captures the essence of Hip Hop’s audacious spirit perfectly. Soulja Boy’s <em>Pretty Boy Swag</em> is a crystallized example of Hip Hop’s ability to assert dominance through sonic minimalism. The Phrygian mode—dark and exotic—has long carried connotations of warlike energy in Western music, and here, it’s wielded with precision. The root and ♭9 evoke an almost primal call, stripped of ornamentation, demanding attention like a soldier’s cadence echoing through a battlefield cleared of debris.</p>
+<p>This lack of harmonic complexity is not a weakness but a calculated statement. It says, “The war is over, and I’ve won.” The repetition isn’t mindless—it’s mantra-like, reinforcing the certainty of survival and success. It eschews the introspection of RnB, where every chord shift can feel like a lingering question about what was lost in love or life. In Hip Hop, particularly in tracks like this, there’s no space for doubt or sorrow. The victor emerges with clarity, not ambiguity.</p>
+<p>The rhythm, too, plays a pivotal role in shaping this ethos. Its military cadence evokes the discipline and drive of conquest, but also its celebratory aftermath. Each beat feels deliberate, reinforcing the unyielding confidence of the lyrics. The result is hypnotic, creating a groove that compels movement and engagement, much like a victorious march.</p>
+<p>By foregrounding rhythm and relegating harmony to a supporting role, <em>Pretty Boy Swag</em> becomes a sonic monument to Hip Hop’s ethos: survival, triumph, and an unapologetic celebration of self. The Phrygian swagger is less about complexity and more about the visceral, elemental pulse of life after victory. It’s war music for a world that has already won.</p>
+</section>
+</section>
+<section id="soulja-boy">
+<h2>Soulja Boy<a class="headerlink" href="#soulja-boy" title="Permalink to this heading">#</a></h2>
+<p>The name <em>Soulja Boy</em> isn’t just a stylistic quirk; it’s a deliberate invocation of the soldier archetype. The spelling, “Soulja,” merges the gritty phonetics of urban vernacular with the unmistakable image of a soldier. This isn’t the disciplined soldier of classical war epics, but a streetwise combatant who has fought battles—not on distant battlefields, but in life, culture, and identity.</p>
+<p>The military cadence in <em>Pretty Boy Swag</em> aligns perfectly with this persona. Soulja Boy embodies the archetype of a victorious soldier swaggering through the post-conflict glow. His music, minimalistic yet commanding, mirrors the stripped-down uniform of a warrior who’s traded ceremonial pomp for raw, unfiltered authenticity. There’s no need for frills or embellishments; the name itself is a badge of resilience and triumph.</p>
+<p>The phonetic shift to “Soulja” also adds a layer of cultural reclamation. It positions him not just as a soldier in a conventional sense, but as one shaped by the realities of the streets—where survival, adaptation, and self-assertion are daily battles. It redefines the concept of war and victory, grounding it in the lived experience of a community that fights its own wars: systemic inequality, personal identity, and cultural erasure.</p>
+<p>In this light, <em>Pretty Boy Swag</em> isn’t just a song; it’s an anthem for a new kind of soldier—one who fights with rhythm, swagger, and defiant minimalism. Soulja Boy’s name is a declaration of allegiance to this ethos, a title earned in the trenches of cultural and personal combat.</p>
+</section>
+<section id="unified-framework">
+<h2>Unified Framework<a class="headerlink" href="#unified-framework" title="Permalink to this heading">#</a></h2>
+<p>Whether in music, drama, or geopolitics, these dynamics share a common thread: the interplay of ambiguity and assertion. RnB captures the tension of transformation, Hip Hop embodies the confidence of resolution, and <em>Hamlet</em> and proxy wars illustrate the tragic beauty of navigating duty and survival. Together, they reveal the human condition—a perpetual dance between doubt, triumph, and the search for meaning.</p>
+<p>Our dance floor is something akin to a Rodeo, where shifting equilibria test our footing. Here, every step—a Mixolydian sway, a Phrygian stomp, or a calculated diplomatic maneuver—balances precariously between chaos and control. The ride is unpredictable, yet the rhythm persists, a reflection of our collective struggle to find grace amid the bucking uncertainties of life.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./act1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="part1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Mind</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chapter2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Weakness</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unvalu-d-persons">Unvalu’d Persons</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#network-of-duty">Network of Duty</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ophelia-a-peripheral-node"><strong>Ophelia: A Peripheral Node</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proxy-games">Proxy Games</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#proxy-wars-ambiguity-in-trade-and-conflict"><strong>Proxy Wars: Ambiguity in Trade and Conflict</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-aesthetics-of-proxy-ambiguity"><strong>The Aesthetics of Proxy Ambiguity</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#toward-a-new-moral-framework"><strong>Toward a New Moral Framework</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#epilogue-hypnos-thanatos-and-eros"><strong>Epilogue: Hypnos, Thanatos, and Eros</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rhythm-blues">Rhythm &amp; Blues</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#seven-year-itch-ambiguity-as-reflection">Seven-Year Itch: Ambiguity as Reflection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonic-ambiguity-a-musical-reflection"><strong>Harmonic Ambiguity: A Musical Reflection</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#harmonic-networks-mixolydian-and-beyond"><strong>Harmonic Networks: Mixolydian and Beyond</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dance-between-modes-transformational-and-embodied"><strong>The Dance Between Modes: Transformational and Embodied</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#toward-a-new-harmonic-philosophy"><strong>Toward a New Harmonic Philosophy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rnb-as-a-network-of-feeling"><strong>RnB as a Network of Feeling</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trap-music">Trap Music</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-glow-after-war">The Glow After War</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemental-minimalism-phrygian-swagger"><strong>Elemental Minimalism: Phrygian Swagger</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elemental-phrygian-the-root-of-the-matter"><strong>Elemental Phrygian: The Root of the Matter</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimalism-as-philosophy"><strong>Minimalism as Philosophy</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dance-of-tension-and-release"><strong>The Dance of Tension and Release</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trap-as-elemental-music"><strong>Trap as Elemental Music</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#soulja-boy">Soulja Boy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unified-framework">Unified Framework</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Copyright © 2025 Katura & Zarathustra
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
