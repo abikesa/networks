@@ -1,0 +1,54 @@
+# Dionysus
+format: jb-book
+root: index
+chapters:
+  # Sing O Muse!
+  - file: act1/part1
+    sections:
+      - title: Network
+        file: act1/chapter1
+      - title: Layers
+        file: act1/chapter2
+      - title: Vision
+        file: act1/chapter3
+        
+  # Sing O Muse!
+  - file: act2/part2
+    sections:
+      - title: Histology
+        file: act2/chapter1
+      - title: Ligands
+        file: act2/chapter2
+      - title: Pathways
+        file: act2/chapter3
+
+  # Apollo
+  - file: act3/part3
+    sections:
+      - title: Emotional
+        file: act3/act1
+        sections:
+          - title: Biology (Embodiment)
+            file: act3/part1/part1_1
+          - title: Sociology (Tokenization)
+            file: act3/part1/part1_2
+          - title: Psychology (Transformation)
+            file: act3/part1/part1_3
+      - title: Archetypal
+        file: act3/act2
+        sections:
+          - title: Paradiso
+            file: act3/part2/part2_1
+          - title: Limbo
+            file: act3/part2/part2_2
+          - title: Inferno
+            file: act3/part2/part2_3
+      - title: Relational
+        file: act3/act3
+        sections:
+          - title: Persona
+            file: act3/part3/part3_1
+          - title: Shadow
+            file: act3/part3/part3_2
+
+  - file: act3/part3/part3_3
