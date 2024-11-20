@@ -5,21 +5,21 @@ chapters:
   # Sing O Muse!
   - file: act1/part1
     sections:
-      - title: Network
+      - title: Non
         file: act1/chapter1
-      - title: Layers
+      - title: Plus
         file: act1/chapter2
-      - title: Vision
+      - title: Ultra
         file: act1/chapter3
         
   # Sing O Muse!
   - file: act2/part2
     sections:
-      - title: Histology
+      - title: Invest
         file: act2/chapter1
-      - title: Ligands
+      - title: Bet
         file: act2/chapter2
-      - title: Pathways
+      - title: Gamble
         file: act2/chapter3
 
   # Apollo
