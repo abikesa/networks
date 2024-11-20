@@ -758,100 +758,34 @@ Pyrrhus’s relentless campaigns were seen by some as the mark of a heroic spiri
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="c1"># Define input nodes, including uremia&#39;s effects on neurocognitive development</span>
-<span class="n">input_nodes_patient</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;Uremic_Toxins&#39;</span><span class="p">,</span> <span class="s1">&#39;Cytokines&#39;</span><span class="p">,</span> <span class="s1">&#39;Acidosis&#39;</span><span class="p">,</span> <span class="s1">&#39;Electrolyte_Imbalance&#39;</span><span class="p">,</span> <span class="s1">&#39;Oxidative_Stress&#39;</span><span class="p">,</span> <span class="s1">&#39;Anemia&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Blood_Urea_Nitrogen&#39;</span><span class="p">,</span> <span class="s1">&#39;Creatinine&#39;</span><span class="p">,</span> <span class="s1">&#39;Nutrition&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflammation&#39;</span><span class="p">,</span> <span class="s1">&#39;Neuroinflammation&#39;</span><span class="p">,</span> <span class="s1">&#39;CSF_Composition&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;ATP_Disruption&#39;</span><span class="p">,</span> <span class="s1">&#39;Astrocyte_Function&#39;</span><span class="p">,</span> <span class="s1">&#39;Synaptic_Plasticity&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurogenesis&#39;</span><span class="p">,</span> <span class="s1">&#39;White_Matter_Damage&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Executive_Function&#39;</span><span class="p">,</span> <span class="s1">&#39;Attention&#39;</span><span class="p">,</span> <span class="s1">&#39;Memory&#39;</span><span class="p">,</span> <span class="s1">&#39;Emotional_Regulation&#39;</span><span class="p">,</span> <span class="s1">&#39;Social_Development&#39;</span>
-<span class="p">]</span>
-
-<span class="c1"># Define hidden layer nodes as archetypal latent space</span>
-<span class="n">hidden_layer_labels_patient</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;Metabolic_Disruption&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflammatory_Response&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurological_Impact&#39;</span>
-<span class="p">]</span>
-
-<span class="c1"># Define output nodes for neurodevelopmental outcomes</span>
-<span class="n">output_nodes_patient</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;Cognitive_Trajectory&#39;</span><span class="p">,</span> <span class="s1">&#39;Intervention_Effectiveness&#39;</span><span class="p">,</span> <span class="s1">&#39;Quality_of_Life&#39;</span>
-<span class="p">]</span>
-
-<span class="c1"># Initialize graph</span>
-<span class="n">G_patient</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
-
-<span class="c1"># Add all nodes to the graph</span>
-<span class="n">G_patient</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">input_nodes_patient</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="s1">&#39;input&#39;</span><span class="p">)</span>
-<span class="n">G_patient</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">hidden_layer_labels_patient</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="s1">&#39;hidden&#39;</span><span class="p">)</span>
-<span class="n">G_patient</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">output_nodes_patient</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="s1">&#39;output&#39;</span><span class="p">)</span>
-
-<span class="c1"># Define key pathways related to uremia</span>
-<span class="n">thick_edges_patient</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="c1"># Pathways emphasizing Metabolic Disruption</span>
-    <span class="p">(</span><span class="s1">&#39;Uremic_Toxins&#39;</span><span class="p">,</span> <span class="s1">&#39;Metabolic_Disruption&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Electrolyte_Imbalance&#39;</span><span class="p">,</span> <span class="s1">&#39;Metabolic_Disruption&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Acidosis&#39;</span><span class="p">,</span> <span class="s1">&#39;Metabolic_Disruption&#39;</span><span class="p">),</span>
-
-    <span class="c1"># Pathways emphasizing Inflammatory Response</span>
-    <span class="p">(</span><span class="s1">&#39;Cytokines&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflammatory_Response&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Neuroinflammation&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflammatory_Response&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Inflammation&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflammatory_Response&#39;</span><span class="p">),</span>
-
-    <span class="c1"># Pathways emphasizing Neurological Impact</span>
-    <span class="p">(</span><span class="s1">&#39;White_Matter_Damage&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurological_Impact&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Synaptic_Plasticity&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurological_Impact&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Neurogenesis&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurological_Impact&#39;</span><span class="p">),</span>
-
-    <span class="c1"># Linking hidden nodes to outcomes</span>
-    <span class="p">(</span><span class="s1">&#39;Metabolic_Disruption&#39;</span><span class="p">,</span> <span class="s1">&#39;Cognitive_Trajectory&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Inflammatory_Response&#39;</span><span class="p">,</span> <span class="s1">&#39;Intervention_Effectiveness&#39;</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;Neurological_Impact&#39;</span><span class="p">,</span> <span class="s1">&#39;Quality_of_Life&#39;</span><span class="p">)</span>
-<span class="p">]</span>
-
-<span class="c1"># Connect all input nodes to hidden layer archetypes</span>
-<span class="k">for</span> <span class="n">input_node</span> <span class="ow">in</span> <span class="n">input_nodes_patient</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">hidden_node</span> <span class="ow">in</span> <span class="n">hidden_layer_labels_patient</span><span class="p">:</span>
-        <span class="n">G_patient</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">input_node</span><span class="p">,</span> <span class="n">hidden_node</span><span class="p">)</span>
-
-<span class="c1"># Connect hidden layer archetypes to output nodes</span>
-<span class="k">for</span> <span class="n">hidden_node</span> <span class="ow">in</span> <span class="n">hidden_layer_labels_patient</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">output_node</span> <span class="ow">in</span> <span class="n">output_nodes_patient</span><span class="p">:</span>
-        <span class="n">G_patient</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">hidden_node</span><span class="p">,</span> <span class="n">output_node</span><span class="p">)</span>
-
-<span class="c1"># Define layout positions</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Adjust positions to align the midpoints of all layers on the y-axis</span>
 <span class="n">pos_patient</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">input_nodes_patient</span><span class="p">):</span>
-    <span class="n">pos_patient</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">i</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.25</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Input nodes at the bottom</span>
+<span class="n">layer_spacing</span> <span class="o">=</span> <span class="mi">2</span>
 
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">output_nodes_patient</span><span class="p">):</span>
-    <span class="n">pos_patient</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">i</span> <span class="o">+</span> <span class="mf">1.5</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Output nodes at the top</span>
+<span class="c1"># Calculate offsets to align midpoints</span>
+<span class="n">input_midpoint_offset</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_nodes_patient</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">0.5</span>
+<span class="n">hidden_midpoint_offset</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">hidden_layer_labels_patient</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">output_midpoint_offset</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">output_nodes_patient</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+
+<span class="c1"># Assign positions with aligned midpoints</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">input_nodes_patient</span><span class="p">):</span>
+    <span class="n">pos_patient</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">i</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="n">input_midpoint_offset</span><span class="p">)</span>  <span class="c1"># Input nodes (top layer)</span>
 
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">hidden_layer_labels_patient</span><span class="p">):</span>
-    <span class="n">pos_patient</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Hidden nodes in the middle layer</span>
+    <span class="n">pos_patient</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">layer_spacing</span><span class="p">,</span> <span class="o">-</span><span class="n">i</span> <span class="o">+</span> <span class="n">hidden_midpoint_offset</span><span class="p">)</span>  <span class="c1"># Hidden nodes (middle layer)</span>
 
-<span class="c1"># Define color scheme for nodes based on layers and importance</span>
-<span class="n">node_colors_patient</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s1">&#39;skyblue&#39;</span> <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">input_nodes_patient</span> <span class="k">else</span>
-    <span class="s1">&#39;orange&#39;</span> <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">hidden_layer_labels_patient</span> <span class="k">else</span>
-    <span class="s1">&#39;lightgreen&#39;</span> <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">output_nodes_patient</span> <span class="k">else</span>
-    <span class="s1">&#39;lightgray&#39;</span>
-    <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">G_patient</span><span class="o">.</span><span class="n">nodes</span><span class="p">()</span>
-<span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">output_nodes_patient</span><span class="p">):</span>
+    <span class="n">pos_patient</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">layer_spacing</span><span class="p">,</span> <span class="o">-</span><span class="n">i</span> <span class="o">+</span> <span class="n">output_midpoint_offset</span><span class="p">)</span>  <span class="c1"># Output nodes (bottom layer)</span>
 
-<span class="c1"># Set edge widths with thickened lines for key pathways</span>
-<span class="n">edge_widths_patient</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span> <span class="k">if</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">thick_edges_patient</span> <span class="k">else</span> <span class="mf">0.5</span> <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">G_patient</span><span class="o">.</span><span class="n">edges</span><span class="p">()]</span>
-
-<span class="c1"># Draw graph with rotated positions, thicker narrative edges, and archetypal colors</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
-<span class="n">pos_rotated</span> <span class="o">=</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="n">pos_patient</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
-
-<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G_patient</span><span class="p">,</span> <span class="n">pos_rotated</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors_patient</span><span class="p">,</span>
-        <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">arrows</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">edge_widths_patient</span><span class="p">)</span>
+<span class="c1"># Draw the updated graph with aligned midpoints</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>  <span class="c1"># Maintain the tall figure for clarity</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+    <span class="n">G_patient</span><span class="p">,</span> <span class="n">pos_patient</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors_patient</span><span class="p">,</span>
+    <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">arrows</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">edge_widths_patient</span>
+<span class="p">)</span>
 
 <span class="c1"># Add title and remove axes for clean visualization</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Impact of Uremia on Neurocognitive Development in Children&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Impact of Uremia on Neurocognitive Development in Children (Aligned Midpoints)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -859,7 +793,7 @@ Pyrrhus’s relentless campaigns were seen by some as the mark of a heroic spiri
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/a66836f3d635752de08eb3a544031cf8951bc8293d80038176e12a0c8c670e16.png" src="../../_images/a66836f3d635752de08eb3a544031cf8951bc8293d80038176e12a0c8c670e16.png" />
+<img alt="../../_images/b881a9421ec6c3e5a03fa47541d276e47d16abd7572f9595522e03b7acfc7cef.png" src="../../_images/b881a9421ec6c3e5a03fa47541d276e47d16abd7572f9595522e03b7acfc7cef.png" />
 </div>
 </div>
 </section>
@@ -1801,6 +1735,161 @@ High-resolution typing uncovers subtle differences in HLA matching, moving beyon
 <p>Each slide refines, elaborates, or presents case studies and deeper theoretical foundations derived from the earlier slides. Specific scenarios, patient outcomes, and technology applications dominate the final slides to contextualize the solutions presented. These slides repeat the emphasis on integrating high-tech solutions with equity considerations and precision medicine strategies.</p>
 <hr class="docutils" />
 <p>Please confirm the direction for slides 18-37, and I’ll elaborate further into the detailed context of each!</p>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Define input nodes, including uremia&#39;s effects on neurocognitive development</span>
+<span class="n">input_nodes_patient</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Uremic_Toxins&#39;</span><span class="p">,</span> <span class="s1">&#39;Cytokines&#39;</span><span class="p">,</span> <span class="s1">&#39;Acidosis&#39;</span><span class="p">,</span> <span class="s1">&#39;Electrolyte_Imbalance&#39;</span><span class="p">,</span> <span class="s1">&#39;Oxidative_Stress&#39;</span><span class="p">,</span> <span class="s1">&#39;Anemia&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Blood_Urea_Nitrogen&#39;</span><span class="p">,</span> <span class="s1">&#39;Creatinine&#39;</span><span class="p">,</span> <span class="s1">&#39;Nutrition&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflammation&#39;</span><span class="p">,</span> <span class="s1">&#39;Neuroinflammation&#39;</span><span class="p">,</span> <span class="s1">&#39;CSF_Composition&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ATP_Disruption&#39;</span><span class="p">,</span> <span class="s1">&#39;Astrocyte_Function&#39;</span><span class="p">,</span> <span class="s1">&#39;Synaptic_Plasticity&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurogenesis&#39;</span><span class="p">,</span> <span class="s1">&#39;White_Matter_Damage&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Executive_Function&#39;</span><span class="p">,</span> <span class="s1">&#39;Attention&#39;</span><span class="p">,</span> <span class="s1">&#39;Memory&#39;</span><span class="p">,</span> <span class="s1">&#39;Emotional_Regulation&#39;</span><span class="p">,</span> <span class="s1">&#39;Social_Development&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># Define additional hidden layer nodes for nuanced interactions</span>
+<span class="n">additional_hidden_layer_labels_patient</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Vascular_Health&#39;</span><span class="p">,</span> <span class="s1">&#39;Mitochondrial_Function&#39;</span><span class="p">,</span> <span class="s1">&#39;Genetic_Predispositions&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># Define primary hidden layer nodes as archetypal latent space</span>
+<span class="n">hidden_layer_labels_patient</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Metabolic_Disruption&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurological_Impact&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflammatory_Response&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># Define output nodes for neurodevelopmental outcomes</span>
+<span class="n">output_nodes_patient</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;Quality_of_Life&#39;</span><span class="p">,</span> <span class="s1">&#39;Intervention_Effectiveness&#39;</span><span class="p">,</span> <span class="s1">&#39;Cognitive_Trajectory&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># Initialize graph</span>
+<span class="n">G_patient</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+
+<span class="c1"># Add all nodes to the graph</span>
+<span class="n">G_patient</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">input_nodes_patient</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="s1">&#39;input&#39;</span><span class="p">)</span>
+<span class="n">G_patient</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">additional_hidden_layer_labels_patient</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="s1">&#39;additional_hidden&#39;</span><span class="p">)</span>
+<span class="n">G_patient</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">hidden_layer_labels_patient</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="s1">&#39;hidden&#39;</span><span class="p">)</span>
+<span class="n">G_patient</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">output_nodes_patient</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="s1">&#39;output&#39;</span><span class="p">)</span>
+
+<span class="c1"># Define key pathways related to uremia</span>
+<span class="n">thick_edges_patient</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="c1"># Pathways emphasizing Metabolic Disruption</span>
+    <span class="p">(</span><span class="s1">&#39;Uremic_Toxins&#39;</span><span class="p">,</span> <span class="s1">&#39;Metabolic_Disruption&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Electrolyte_Imbalance&#39;</span><span class="p">,</span> <span class="s1">&#39;Metabolic_Disruption&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Acidosis&#39;</span><span class="p">,</span> <span class="s1">&#39;Metabolic_Disruption&#39;</span><span class="p">),</span>
+
+    <span class="c1"># Pathways emphasizing Inflammatory Response</span>
+    <span class="p">(</span><span class="s1">&#39;Cytokines&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflammatory_Response&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Neuroinflammation&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflammatory_Response&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Inflammation&#39;</span><span class="p">,</span> <span class="s1">&#39;Inflammatory_Response&#39;</span><span class="p">),</span>
+
+    <span class="c1"># Pathways emphasizing Neurological Impact</span>
+    <span class="p">(</span><span class="s1">&#39;White_Matter_Damage&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurological_Impact&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Synaptic_Plasticity&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurological_Impact&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Neurogenesis&#39;</span><span class="p">,</span> <span class="s1">&#39;Neurological_Impact&#39;</span><span class="p">),</span>
+
+    <span class="c1"># Linking hidden nodes to outcomes</span>
+    <span class="p">(</span><span class="s1">&#39;Metabolic_Disruption&#39;</span><span class="p">,</span> <span class="s1">&#39;Cognitive_Trajectory&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Inflammatory_Response&#39;</span><span class="p">,</span> <span class="s1">&#39;Intervention_Effectiveness&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;Neurological_Impact&#39;</span><span class="p">,</span> <span class="s1">&#39;Quality_of_Life&#39;</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="c1"># Connect input nodes to additional hidden layer nodes</span>
+<span class="k">for</span> <span class="n">input_node</span> <span class="ow">in</span> <span class="n">input_nodes_patient</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">hidden_node</span> <span class="ow">in</span> <span class="n">additional_hidden_layer_labels_patient</span><span class="p">:</span>
+        <span class="n">G_patient</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">input_node</span><span class="p">,</span> <span class="n">hidden_node</span><span class="p">)</span>
+
+<span class="c1"># Connect additional hidden layer nodes to primary hidden layer nodes</span>
+<span class="k">for</span> <span class="n">additional_hidden_node</span> <span class="ow">in</span> <span class="n">additional_hidden_layer_labels_patient</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">hidden_node</span> <span class="ow">in</span> <span class="n">hidden_layer_labels_patient</span><span class="p">:</span>
+        <span class="n">G_patient</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">additional_hidden_node</span><span class="p">,</span> <span class="n">hidden_node</span><span class="p">)</span>
+
+<span class="c1"># Connect primary hidden layer nodes to output nodes</span>
+<span class="k">for</span> <span class="n">hidden_node</span> <span class="ow">in</span> <span class="n">hidden_layer_labels_patient</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">output_node</span> <span class="ow">in</span> <span class="n">output_nodes_patient</span><span class="p">:</span>
+        <span class="n">G_patient</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">hidden_node</span><span class="p">,</span> <span class="n">output_node</span><span class="p">)</span>
+
+<span class="c1"># Define layout positions for top-down orientation</span>
+<span class="n">pos_patient</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">layer_spacing</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># Calculate offsets to align midpoints</span>
+<span class="n">input_midpoint_offset</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">input_nodes_patient</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">0.5</span>
+<span class="n">additional_hidden_midpoint_offset</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">additional_hidden_layer_labels_patient</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">hidden_midpoint_offset</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">hidden_layer_labels_patient</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">output_midpoint_offset</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">output_nodes_patient</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+
+<span class="c1"># Assign positions with aligned midpoints</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">input_nodes_patient</span><span class="p">):</span>
+    <span class="n">pos_patient</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">i</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="n">input_midpoint_offset</span><span class="p">)</span>  <span class="c1"># Input nodes (top layer)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">additional_hidden_layer_labels_patient</span><span class="p">):</span>
+    <span class="n">pos_patient</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">layer_spacing</span><span class="p">,</span> <span class="o">-</span><span class="n">i</span> <span class="o">+</span> <span class="n">additional_hidden_midpoint_offset</span><span class="p">)</span>  <span class="c1"># Additional hidden nodes</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">hidden_layer_labels_patient</span><span class="p">):</span>
+    <span class="n">pos_patient</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">layer_spacing</span><span class="p">,</span> <span class="o">-</span><span class="n">i</span> <span class="o">+</span> <span class="n">hidden_midpoint_offset</span><span class="p">)</span>  <span class="c1"># Primary hidden nodes</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">output_nodes_patient</span><span class="p">):</span>
+    <span class="n">pos_patient</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">layer_spacing</span><span class="p">,</span> <span class="o">-</span><span class="n">i</span> <span class="o">+</span> <span class="n">output_midpoint_offset</span><span class="p">)</span>  <span class="c1"># Output nodes (bottom layer)</span>
+
+<span class="c1"># Define color coding for each layer</span>
+<span class="n">input_node_colors</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;paleturquoise&#39;</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="k">else</span>
+    <span class="s1">&#39;lightgreen&#39;</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="k">else</span>
+    <span class="s1">&#39;lightsalmon&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">input_nodes_patient</span><span class="p">))</span>
+<span class="p">]</span>
+
+<span class="n">additional_hidden_node_colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;paleturquoise&#39;</span><span class="p">,</span> <span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="s1">&#39;lightsalmon&#39;</span><span class="p">]</span>
+<span class="n">hidden_node_colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;paleturquoise&#39;</span><span class="p">,</span> <span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="s1">&#39;lightsalmon&#39;</span><span class="p">]</span>
+<span class="n">output_node_colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;paleturquoise&#39;</span><span class="p">,</span> <span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="s1">&#39;lightsalmon&#39;</span><span class="p">]</span>
+
+<span class="c1"># Combine colors for all nodes in the graph</span>
+<span class="n">node_colors_patient</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">G_patient</span><span class="o">.</span><span class="n">nodes</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">input_nodes_patient</span><span class="p">:</span>
+        <span class="n">node_colors_patient</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">input_node_colors</span><span class="p">[</span><span class="n">input_nodes_patient</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">node</span><span class="p">)])</span>
+    <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">additional_hidden_layer_labels_patient</span><span class="p">:</span>
+        <span class="n">node_colors_patient</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">additional_hidden_node_colors</span><span class="p">[</span><span class="n">additional_hidden_layer_labels_patient</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">node</span><span class="p">)])</span>
+    <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">hidden_layer_labels_patient</span><span class="p">:</span>
+        <span class="n">node_colors_patient</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">hidden_node_colors</span><span class="p">[</span><span class="n">hidden_layer_labels_patient</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">node</span><span class="p">)])</span>
+    <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">output_nodes_patient</span><span class="p">:</span>
+        <span class="n">node_colors_patient</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">output_node_colors</span><span class="p">[</span><span class="n">output_nodes_patient</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">node</span><span class="p">)])</span>
+
+<span class="c1"># Set edge widths with thickened lines for key pathways</span>
+<span class="n">edge_widths_patient</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span> <span class="k">if</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">thick_edges_patient</span> <span class="k">else</span> <span class="mf">0.5</span> <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">G_patient</span><span class="o">.</span><span class="n">edges</span><span class="p">()]</span>
+
+<span class="c1"># Draw graph with top-down orientation and color-coded layers</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>  <span class="c1"># Maintain tall figure for clarity</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+    <span class="n">G_patient</span><span class="p">,</span> <span class="n">pos_patient</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors_patient</span><span class="p">,</span>
+    <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> <span class="n">arrows</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">edge_widths_patient</span>
+<span class="p">)</span>
+
+<span class="c1"># Add title and remove axes for clean visualization</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Impact of Uremia on Neurocognitive Development in Children (Expanded Layers)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<img alt="../../_images/f6a8e2197d3f1b687106c314ae21678f7ad5d51a46ba0f5e652438920628705e.png" src="../../_images/f6a8e2197d3f1b687106c314ae21678f7ad5d51a46ba0f5e652438920628705e.png" />
+</div>
+</details>
+</div>
 </section>
 </section>
 </section>
