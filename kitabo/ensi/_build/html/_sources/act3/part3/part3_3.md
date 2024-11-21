@@ -1,6 +1,4 @@
-# Individuation
-
-**Epilogue: Peaks for the Long-Legged**  
+# Epilogue 
 
 Reader, this network of ours is not a map for the timid. It is a landscape of towering peaks, each one a hidden node that demands you leap—not shuffle—from summit to summit. If your legs are long enough, if your stride is bold, you will ascend these peaks and understand them: **cooperation, transaction, adversarial.** These are not merely points in a model; they are perspectives from which to view the entire system, vast and interconnected.  
 
@@ -8,7 +6,7 @@ But what of those whose legs are short? What of those who cannot leap? For them,
 
 The long-legged know better. They know that the three hidden nodes—cooperation (blue), transaction (green), and adversarial (red)—are the only true pathways from input to output. These peaks shape every transformation, every connection, every outcome. They also know that **God is dead** signals the weakening of cooperation, the once-strong blue node that held so much weight. With this node faltering, the balance shifts. The transactional grows louder, the adversarial burns brighter, and the outputs grow jagged, fragmented.  
 
-This is not a philosophical abstraction; it is the world we inhabit. The long-legged can see how this shift plays out: in nations divided, in ideologies colliding, in nostalgia for homogeneity and simplicity that never truly existed. They see the adversarial node dominate in MAGA chants, in Brexit slogans, in the rise of nationalism—not because the node is evil but because it is the logical output of weakened cooperation. They see the transactional node thrive in market worship, in the reductio`n of human connection to currency and contracts, in the hollow promises of meritocracy.  
+This is not a philosophical abstraction; it is the world we inhabit. The long-legged can see how this shift plays out: in nations divided, in ideologies colliding, in nostalgia for homogeneity and simplicity that never truly existed. They see the adversarial node dominate in MAGA chants, in Brexit slogans, in the rise of nationalism—not because the node is evil but because it is the logical output of weakened cooperation. They see the transactional node thrive in market worship, in the reduction of human connection to currency and contracts, in the hollow promises of meritocracy.  
 
 Those with short legs do not see the peaks. They do not even see the nodes. They cling to inputs—symbols, slogans, grievances—and stumble blindly from one to the next. They imagine they are traversing great distances, but they are trapped in valleys, unable to see the higher structure of the network.  
 
